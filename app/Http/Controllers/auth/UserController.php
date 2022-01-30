@@ -116,7 +116,7 @@ class UserController extends Controller
     public function update(Request $request, $id)
     {
         $request->validate([
-            'email' => 'email|unique:users,email,' . auth()->user()->id,
+
             'password' => 'min:4',
             'name' => 'min:4',
             'last_name' => 'min:4',

@@ -39,7 +39,7 @@ class AsistenciaController extends Controller
     public function store(Request $request)
     {
         $asistencia = Asitencia::create([
-            'user_id' => $request->usuarioId,
+            'user_id' => $request->user_id,
         ] + $request->all());
 
         return response()->json([
@@ -66,6 +66,7 @@ class AsistenciaController extends Controller
         $asistencia = Asitencia::find($id);
 
         $asistencia->fill($request->all());
+        $asistencia->save();
 
         return response()->json([
             "message" => "Asistencia actulizado",

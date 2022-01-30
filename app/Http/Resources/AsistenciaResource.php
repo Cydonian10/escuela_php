@@ -19,12 +19,12 @@ class AsistenciaResource extends JsonResource
             'name' => $this->user->name,
             'lastName' => $this->user->last_name,
             'id' => $this->id,
-            'horaSalida' => $this->hora_salida,
-            'horaEntrada' => $this->hora_entrada,
+            'hora_salida' => $this->hora_salida,
+            'hora_entrada' => $this->hora_entrada,
             'fecha' => $this->fecha,
             'asistio' => $this->asistio,
             'description' => $this->description,
-            'descriptionSalida' => $this->description_salida,
+            'description_salida' => $this->description_salida,
         ];
     }
 }
