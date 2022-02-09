@@ -115,17 +115,6 @@ class UserController extends Controller
 
     public function update(Request $request, $id)
     {
-        $request->validate([
-
-            'password' => 'min:4',
-            'name' => 'min:4',
-            'last_name' => 'min:4',
-            'dni' => 'size:8',
-            'telefono' => 'size:9',
-            'grado_seccion' => 'min:1',
-            'rol' => 'in:admin,profesor,asistencias',
-        ]);
-
         $user = User::find($id);
 
         if (!$user) {

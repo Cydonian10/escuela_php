@@ -20,7 +20,7 @@ class CreateAsitenciasTable extends Migration
 
             $table->timestamp('hora_salida')->nullable();
             $table->timestamp('hora_entrada')->nullable();
-            $table->timestamp('fecha')->default(now());
+            $table->timestamp('fecha')->nullable();
             $table->boolean('asistio')->default(false);
             $table->string('description')->nullable();
             $table->string('description_salida')->nullable();

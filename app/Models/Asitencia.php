@@ -15,6 +15,7 @@ class Asitencia extends Model
         'user_id',
         'hora_salida',
         'hora_entrada',
+        'fecha',
         'asistio',
         'description',
         'description_salida',
