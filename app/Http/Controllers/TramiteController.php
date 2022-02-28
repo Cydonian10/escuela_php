@@ -11,7 +11,7 @@ class TramiteController extends Controller
 
     public function index()
     {
-        $tramite = Tramites::orderBy('id', 'desc')->paginate();
+        $tramite = Tramites::orderBy('id', 'desc')->paginate(80);
 
         return response()->json([
             'message' => 'Todos los tramites paginados',
