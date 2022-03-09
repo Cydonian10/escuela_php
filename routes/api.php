@@ -47,7 +47,7 @@ Route::group(['middleware' => ["auth:sanctum"]], function () {
     Route::apiResource('config', SettingController::class)->except('index', 'destroy', 'show');
 
     //! ** Asistencias **
-    Route::apiResource('asistencias', AsistenciaController::class)->except('destroy');
+    Route::apiResource('asistencias', AsistenciaController::class);
     Route::get('/users/usuarios-asistencias/{usuario}', [AsistenciaController::class, 'myAsistencia']);
     Route::post('/users/usuarios-asistencias-fecha/{usuario}', [AsistenciaController::class, 'asistenciasByUserForFehca']);
 

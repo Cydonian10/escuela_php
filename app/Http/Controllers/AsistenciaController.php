@@ -74,6 +74,22 @@ class AsistenciaController extends Controller
         ]);
     }
 
+    public function destroy($id)
+    {
+        $asistencia = Asitencia::find($id);
+
+        if (!$asistencia) {
+            return response()->json([
+                'message' => 'no se encontro la asistencia'
+            ]);
+        }
+
+        $asistencia->delete();
+        return response()->json([
+            'message' => 'Eliminado'
+        ]);
+    }
+
     public function asistenciasByUserForFehca(Request $request, $id)
     {
         // $asistencias =  Asitencia::whereBetween('fecha', ['2022-01-27', '2022-01-29'])->where('user_id', '=', '2')->get();
